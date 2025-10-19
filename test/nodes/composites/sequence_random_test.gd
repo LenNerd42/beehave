@@ -11,7 +11,7 @@ const __count_up_action = "res://test/actions/count_up_action.gd"
 const RANDOM_SEED = 123
 
 var tree: BeehaveTree
-var sequence: SequenceRandomComposite
+var sequence: BeehaveSequenceRandom
 var action1: BeehaveAction
 var action2: BeehaveAction
 

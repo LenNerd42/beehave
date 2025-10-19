@@ -12,7 +12,7 @@ const __blackboard = "res://addons/beehave/blackboard.gd"
 const KEY: String = "test_key"
 const KEY2: String = "other_key"
 
-var blackboard_set: BeehaveBlackboardSetAction
+var blackboard_set: BeehaveBlackboardSet
 var actor: Node
 var blackboard: BeehaveBlackboard
 

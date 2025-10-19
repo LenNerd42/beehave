@@ -4,5 +4,6 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="BeehaveTree" type="Node" parent="."]
+[node name="BeehaveTree" type="BeehaveTree" parent="."]
+enabled = false
 script = ExtResource("1_ehk4d")

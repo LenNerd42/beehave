@@ -10,7 +10,7 @@ const __blackboard = "res://addons/beehave/blackboard.gd"
 
 const KEY: String = "test_key"
 
-var blackboard_erase: BeehaveBlackboardEraseAction
+var blackboard_erase: BeehaveBlackboardErase
 var actor: Node
 var blackboard: BeehaveBlackboard
 

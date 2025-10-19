@@ -31,7 +31,7 @@ func _get_random_action():
 	return weights.size() - 1
 
 
-func tick(context: BeehaveContext) -> int:
+func _tick(context: BeehaveContext) -> BeehaveTickStatus:
 	var step = Time.get_ticks_msec() / reset_duration_msec
 	if step != last_step:
 		action = _get_random_action()

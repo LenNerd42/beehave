@@ -11,7 +11,7 @@ func _tick(context) -> BeehaveTickStatus:
 	return status
 
 
-func interrupt(context: BeehaveContext) -> void:
+func _interrupt(context: BeehaveContext) -> void:
 	count = 0
 	context.get_blackboard().set_value(key, count)
 	status = FAILURE

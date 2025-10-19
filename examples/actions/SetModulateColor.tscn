@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://examples/actions/SetModulateColor.gd" id="1_6tkm0"]
 
-[node name="SetModulateColor" type="Node"]
+[node name="SetModulateColor" type="BeehaveAction"]
 script = ExtResource("1_6tkm0")

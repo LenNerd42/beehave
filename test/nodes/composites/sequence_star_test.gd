@@ -14,7 +14,7 @@ var action1: BeehaveAction
 var action2: BeehaveAction
 var actor: Node
 var blackboard: BeehaveBlackboard
-var sequence: SequenceStarComposite
+var sequence: BeehaveSequenceStar
 
 
 func before_test() -> void:

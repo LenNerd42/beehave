@@ -9,7 +9,7 @@ const __source = "res://addons/beehave/nodes/leaves/blackboard_compare.gd"
 const __blackboard = "res://addons/beehave/blackboard.gd"
 
 
-var blackboard_compare: BeehaveBlackboardCompareCondition
+var blackboard_compare: BeehaveBlackboardCompare
 var actor: Node
 var blackboard: BeehaveBlackboard
 

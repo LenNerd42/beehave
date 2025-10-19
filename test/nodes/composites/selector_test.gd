@@ -10,7 +10,7 @@ const __count_up_action = "res://test/actions/count_up_action.gd"
 const __selector_reactive = "res://addons/beehave/nodes/composites/selector_reactive.gd"
 
 var tree: BeehaveTree
-var selector: SelectorComposite
+var selector: BeehaveSelector
 var action1: BeehaveAction
 var action2: BeehaveAction
 var actor: Node

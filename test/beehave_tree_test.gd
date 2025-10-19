@@ -25,9 +25,9 @@ func test_low_tick_rate() -> void:
 	var runner = scene_runner(scene)
 	scene.beehave_tree.set_tick_rate(3)
 	await runner.simulate_frames(1)
-	assert_that(scene.beehave_tree.get_tick_status()).is_equal(-1)
+	assert_that(scene.beehave_tree.get_tick_status()).is_equal(BeehaveTreeNode.PENDING)
 	await runner.simulate_frames(1)
-	assert_that(scene.beehave_tree.get_tick_status()).is_equal(-1)
+	assert_that(scene.beehave_tree.get_tick_status()).is_equal(BeehaveTreeNode.PENDING)
 	await runner.simulate_frames(1)
 	assert_that(scene.beehave_tree.get_tick_status()).is_equal(BeehaveTreeNode.SUCCESS)
 

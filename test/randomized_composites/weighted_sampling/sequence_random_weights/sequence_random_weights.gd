@@ -5,7 +5,7 @@ signal done
 # How many iterations should the test run.
 @export var test_sample_count: int = 1_000
 
-@onready var sequence_random: SequenceRandomComposite = %SequenceRandom
+@onready var sequence_random: BeehaveSequenceRandom = %BeehaveSequenceRandom
 
 var reset_count: int = 0
 var sample_count: Dictionary = {}

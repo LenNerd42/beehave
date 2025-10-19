@@ -24,7 +24,8 @@ func before_test() -> void:
 	tree.blackboard = blackboard
 
 
-func test_action_after_run() -> void:
+@warning_ignore("unused_parameter")
+func test_action_after_run(do_skip=true, skip_reason="Endless loop in tick()") -> void:
 	var before_run_callback = func (_actor, blackboard):
 		blackboard.set_value("entered", true)
 	

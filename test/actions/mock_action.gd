@@ -11,23 +11,23 @@ signal interrupted(actor, blackboard)
 var tick_count: int = 0
 
 
-func before_run(context: BeehaveContext) -> void:
+func _before_run(context: BeehaveContext) -> void:
 	tick_count = 0
 	started_running.emit(context.get_actor(), context.get_blackboard())
 
 
-func tick(_context: BeehaveContext) -> int:
+func _tick(_context: BeehaveContext) -> BeehaveTickStatus:
 	if tick_count < running_frame_count:
 		tick_count += 1
 		return RUNNING
 	else:
-		return final_result
+		return final_result as BeehaveTickStatus
 
 
-func interrupt(context: BeehaveContext) -> void:
+func _interrupt(context: BeehaveContext) -> void:
 	interrupted.emit(context.get_actor(), context.get_blackboard())
 
 
-func after_run(context: BeehaveContext) -> void:
+func _after_run(context: BeehaveContext) -> void:
 	tick_count = 0
 	stopped_running.emit(context.get_actor(), context.get_blackboard())

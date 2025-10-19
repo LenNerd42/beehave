@@ -6,8 +6,7 @@ extends BeehaveAction
 var current_color
 var tween
 
-func tick(context: BeehaveContext) -> int:
-	
+func _tick(context: BeehaveContext) -> BeehaveTickStatus:
 	if current_color != modulate_color and context.get_actor().modulate != modulate_color:
 		if tween != null:
 			tween.stop()

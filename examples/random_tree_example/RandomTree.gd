@@ -44,10 +44,10 @@ func _make_random_tree():
 func _parse_tree_node(parent, node, index: int):
 	var n
 	if node.children.size() > 1:
-		n = SelectorReactiveComposite.new()
+		n = BeehaveSelectorReactive.new()
 		n.name = "SelectorReactiveComposite%s-%d" % [get_name_suffix(), index]
 	elif node.children.size() == 1:
-		n = InverterDecorator.new()
+		n = BeehaveInverter.new()
 		n.name = "InverterDecorator%s-%d" % [get_name_suffix(), index]
 	else:
 		n = RandomAction.new()

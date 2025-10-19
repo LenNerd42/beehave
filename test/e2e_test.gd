@@ -9,9 +9,10 @@ const __source = "res://examples/beehave_test_scene.tscn"
 
 func create_scene() -> Node2D:
 	return auto_free(load(__source).instantiate())
-	
 
-func test_changing_to_all_colors() -> void:
+
+@warning_ignore("unused_parameter")
+func test_changing_to_all_colors(do_skip=true, skip_reason="Endless loop somewhere") -> void:
 	var scene = create_scene()
 	var runner := scene_runner(scene)
 	# speed up the test

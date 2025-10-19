@@ -1,9 +1,8 @@
-extends ConditionLeaf
+class_name HasNegativePosition extends BeehaveCondition
 
 
-func tick(context: BeehaveContext) -> int:
-	if actor.position.x < 0.0 and actor.position.y < 0.0:
+func _tick(context: BeehaveContext) -> BeehaveTickStatus:
+	if context.actor.position.x < 0.0 and context.actor.position.y < 0.0:
 		return SUCCESS
 	else:
 		return FAILURE
-

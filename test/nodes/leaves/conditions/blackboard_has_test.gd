@@ -11,7 +11,7 @@ const __blackboard = "res://addons/beehave/blackboard.gd"
 
 const KEY: String = "test_key"
 
-var blackboard_has: BeehaveBlackboardHasCondition
+var blackboard_has: BeehaveBlackboardHas
 var actor: Node
 var blackboard: BeehaveBlackboard
 

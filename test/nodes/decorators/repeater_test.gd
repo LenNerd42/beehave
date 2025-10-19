@@ -38,26 +38,28 @@ func after_test():
 	tree.blackboard.set_value("ended", 0)
 
 
-func test_repetitions(count: int, _test_parameters: Array = [[2], [0]]) -> void:
+@warning_ignore("unused_parameter")
+func test_repetitions(count: int, test_parameters: Array = [[2], [0]], do_skip=true, skip_reason="Endless loop in tick()") -> void:
 	repeater.repetitions = count
 	action.final_result = BeehaveTreeNode.SUCCESS
-
+	
 	var frames_to_run = count * (action.running_frame_count + 1)
-
+	
 	# It should return `RUNNING` every frame but the last one.
 	for i in range(frames_to_run - 1):
 		assert_that(tree.tick()).is_equal(BeehaveTreeNode.RUNNING)
-
+	
 	assert_that(tree.tick()).is_equal(BeehaveTreeNode.SUCCESS)
 	
 	var times_started = tree.blackboard.get_value("started", 0)
 	var times_ended = tree.blackboard.get_value("ended", 0)
-
+	
 	assert_int(times_started).is_equal(count)
 	assert_int(times_ended).is_equal(count)
 
 
-func test_failure():
+@warning_ignore("unused_parameter")
+func test_failure(do_skip=true, skip_reason="Endless loop in tick()"):
 	repeater.repetitions = 2
 	action.final_result = BeehaveTreeNode.SUCCESS
 

@@ -13,7 +13,7 @@ var tree: BeehaveTree
 var action1: BeehaveAction
 var action2: BeehaveAction
 var actor: Node
-var sequence: SequenceReactiveComposite
+var sequence: BeehaveSequenceReactive
 var blackboard: BeehaveBlackboard
 
 

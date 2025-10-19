@@ -9,7 +9,7 @@ const __source = "res://addons/beehave/nodes/composites/sequence.gd"
 const __count_up_action = "res://test/actions/count_up_action.gd"
 
 var tree: BeehaveTree
-var sequence: SequenceComposite
+var sequence: BeehaveSequence
 var action1: BeehaveAction
 var action2: BeehaveAction
 var actor: Node
